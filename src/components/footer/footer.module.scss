@@ -4,9 +4,8 @@ footer {
   position: absolute;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: calc(100% - 2px);
   height: 100px;
   bottom: 0;
-  top: calc(100vh - 100px);
   border: solid 1px red;
 }

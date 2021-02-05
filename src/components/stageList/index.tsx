@@ -1,9 +1,12 @@
 import React from "react";
 import style from "./stageList.module.scss";
+import { ILead } from "./../../models/index";
 
 import { Lead } from "./../index";
 
-interface headerProps {}
+interface headerProps {
+  leads: ILead[];
+}
 
 const StageList: React.SFC<headerProps> = (props) => {
   return (
@@ -12,30 +15,9 @@ const StageList: React.SFC<headerProps> = (props) => {
         <h1>CRM Stage list</h1>
         <br />
         <div className={style.leadsContainer}>
-          <Lead />
-          <Lead />
-          <Lead />
-          <Lead />
-          <Lead />
-          <Lead />
-          <Lead />
-          <Lead />
-          <Lead />
-          <Lead />
-          <Lead />
-          <Lead />
-          <Lead />
-          <Lead />
-          <Lead />
-          <Lead />
-          <Lead />
-          <Lead />
-          <Lead />
-          <Lead />
-          <Lead />
-          <Lead />
-          <Lead />
-          <Lead />
+          {props.leads.map((lead: ILead) => {
+            return <Lead data={lead} />;
+          })}
         </div>
       </div>
     </React.Fragment>

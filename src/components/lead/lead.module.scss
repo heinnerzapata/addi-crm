@@ -1,12 +1,18 @@
 .lead {
+  position: relative;
+  display: flex;
+  flex-direction: column;
   width: calc(100% - 8px);
   height: 70px;
   display: flex;
-  flex-direction: row;
   border: solid 1px red;
   background-color: white;
   border-radius: 8px;
   margin-top: 3px;
   margin-bottom: 3px;
   padding: 3px;
+
+  span {
+    width: 100%;
+  }
 }

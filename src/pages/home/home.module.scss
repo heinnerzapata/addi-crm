@@ -1,10 +1,9 @@
 .home {
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   border: solid 1px red;
-  width: 100%;
-  height: calc(100vh);
-  overflow-y: auto;
+  width: calc(100% - 2px);
+  height: calc(100vh - 75px);
 }
