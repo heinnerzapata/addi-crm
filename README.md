@@ -27,3 +27,16 @@ You will also see any lint errors in the console.
       - https://601af1050ee87c001706ac7c.mockapi.io/api/v1/national-archives
 
     it is possible to acces (https://mockapi.io/projects/601af1050ee87c001706ac7d) to edit archives and registry in order to include leads to correct score result.
+
+    only lead with no archive and registry on mock api
+
+    [
+      {
+        "id": "2",
+        "firstName": "Heinner",
+        "lastName": "Zapata",
+        "birthday": 1612853091000,
+        "email": "heinner@gmail.com",
+        "nationalId": "1010197279"
+      }
+    ]
