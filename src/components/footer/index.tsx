@@ -10,7 +10,7 @@ const Footer: React.SFC<headerProps> = (props) => {
   return (
     <React.Fragment>
       <footer className={style.footer}>
-        <Button height="80px" width="70%" onAddLeadClick={props.onAddLeadClick}>
+        <Button height="80px" width={"70%"} size="25px" onClick={props.onAddLeadClick}>
           Add Lend
         </Button>
       </footer>

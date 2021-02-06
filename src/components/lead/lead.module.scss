@@ -1,18 +1,54 @@
 .lead {
   position: relative;
   display: flex;
-  flex-direction: column;
-  width: calc(100% - 8px);
-  height: 70px;
+  flex-direction: row;
+  width: calc(100% - 45px);
+  margin-left: 3px;
   display: flex;
-  border: solid 1px red;
   background-color: white;
   border-radius: 8px;
   margin-top: 3px;
-  margin-bottom: 3px;
+  margin-bottom: 20px;
   padding: 3px;
+  background-color: #F2F2F2;
+  padding: 20px;
+  box-shadow: 0 6px 12px -2px rgba(50, 50, 93, 0.25), 0 3px 7px -3px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s;
+
+  @media (min-width: 1281px) {
+    width: 500px;
+    margin-right: 10px;
+  }
+
+  .score {
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  .data {
+    position: relative;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 160px);
+  }
+
+  .controls {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 160px;
+  }
 
   span {
     width: 100%;
   }
+}
+
+.isProspect {
+  background-color: #D0F5A9 !important;
+}
+
+.noProspect {
+  background-color: #F79F81 !important;
 }

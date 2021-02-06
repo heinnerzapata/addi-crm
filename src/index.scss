@@ -1,8 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai&family=Russo+One&display=swap');
+
 body {
   margin: 0;
   padding: 0;
+  color: #0a2540;
+  font-family: 'Almarai', sans-serif;
 }
 
 .ReactModal__Overlay {
   background-color: rgba(1, 1, 1, 0.7) !important;
+}
+
+h1 {
+  font-family: 'Russo One', sans-serif;
 }

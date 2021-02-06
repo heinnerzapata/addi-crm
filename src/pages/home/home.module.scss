@@ -3,7 +3,24 @@
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  border: solid 1px red;
   width: calc(100% - 2px);
   height: calc(100vh - 75px);
+  .modalContent {
+    position: relative;
+
+    .closeModal {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+}
+
+.date {
+  padding-left: 50%;
+  width: 100%;
+
+  .dateTitle {
+    margin-right: 10px;
+  }
 }

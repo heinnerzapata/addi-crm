@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Modal from "react-modal";
 
 interface crmModalProps {
@@ -8,21 +8,36 @@ interface crmModalProps {
   onCloseModal: () => void;
 }
 
-const customStyles = {
-  content: {
-    top: "50%",
-    left: "50%",
-    right: "auto",
-    bottom: "auto",
-    width: "80%",
-    height: "60%",
-    backgroundColor: "white",
-    marginRight: "-50%",
-    transform: "translate(-50%, -50%)",
-  } as React.CSSProperties,
-};
-
 const CrmModal: React.SFC<crmModalProps> = (props) => {
+  const [width, setWidth] = useState("80%");
+
+  const resizeListener = useCallback(() => {
+    const width = window.innerWidth;
+    setWidth(`${(width < 1280 ? width * 0.8 : width * 0.3).toString()}`);
+  }, []);
+
+  useEffect(() => {
+    resizeListener();
+    window.addEventListener("resize", resizeListener);
+    return () => {
+      window.removeEventListener("resize", resizeListener);
+    };
+  }, [resizeListener]);
+
+  const customStyles = {
+    content: {
+      top: "50%",
+      left: "50%",
+      right: "auto",
+      bottom: "auto",
+      width: `${width}px`,
+      height: "80%",
+      backgroundColor: "white",
+      marginRight: "-50%",
+      transform: "translate(-50%, -50%)",
+    } as React.CSSProperties,
+  };
+
   return (
     <React.Fragment>
       <Modal
